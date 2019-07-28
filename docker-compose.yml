@@ -1,0 +1,20 @@
+version: '3'
+services:
+    private:
+      build: .
+      container_name: lucos_private
+      ports: 
+        - "8016:80"
+      environment:
+        - "SECRET_PATH"
+      volumes:
+        - "medlib:/usr/local/private/medlib"
+      image: lucas42/lucos_private
+
+volumes:
+  medlib:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: "addr=aurora,rw,nolock,hard,nointr,nfsvers=3"
+      device: ":/medlib"

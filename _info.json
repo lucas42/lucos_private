@@ -1,0 +1,6 @@
+{
+	"system": "lucos_private",
+	"ci": {
+		"circle": "gh/lucas42/lucos_private"
+	}
+}
