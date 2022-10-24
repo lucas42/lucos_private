@@ -10,6 +10,7 @@ services:
       volumes:
         - "medlib:/usr/local/private/medlib"
       image: lucas42/lucos_private
+      restart: always
 
 volumes:
   medlib:
