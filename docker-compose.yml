@@ -17,5 +17,5 @@ volumes:
     driver: local
     driver_opts:
       type: nfs
-      o: "addr=aurora,rw,nolock,hard,nointr,nfsvers=3"
+      o: "addr=aurora.local,rw,nolock,hard,nointr,nfsvers=3"
       device: ":/medlib"
