@@ -7,8 +7,8 @@ workflows:
     jobs:
       - lucos/build-armv7l
       - lucos/deploy-xwing:
-         requires:
-           - lucos/build-armv7l
+          requires:
+            - lucos/build-armv7l
           filters:
             branches:
               only:
