@@ -6,6 +6,7 @@ services:
         - "8016:80"
       environment:
         - "SECRET_PATH"
+        - "CLIENT_KEYS"
       volumes:
         - "medlib:/usr/local/private/medlib"
       image: lucas42/lucos_private
