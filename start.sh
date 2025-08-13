@@ -23,7 +23,7 @@ IFS=';' read -ra KEYS <<< "$CLIENT_KEYS"
 for systemkey in "${KEYS[@]}"; do
     IFS='=' read -r systemenv key <<< "$systemkey"
     IFS=':' read -r system env <<< "$systemenv"
-    htpasswd -nbB "$system" "$key" >> "$HTPASSWD_FILE"
+    htpasswd -nbB "$system-$env" "$key" >> "$HTPASSWD_FILE"
 done
 
 httpd-foreground
