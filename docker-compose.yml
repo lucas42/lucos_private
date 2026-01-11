@@ -3,7 +3,7 @@ services:
       build: .
       container_name: lucos_private
       ports: 
-        - "8016:80"
+        - $PORT:80
       environment:
         - "CLIENT_KEYS"
       volumes:
