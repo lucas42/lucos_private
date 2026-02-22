@@ -7,6 +7,7 @@ workflows:
     jobs:
       - lucos/build-armv7l
       - lucos/deploy-xwing:
+          serial-group: << pipeline.project.slug >>/deploy-xwing
           requires:
             - lucos/build-armv7l
           filters:
