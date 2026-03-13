@@ -10,6 +10,12 @@ services:
         - "medlib:/usr/local/private/medlib"
       image: lucas42/lucos_private
       restart: always
+      healthcheck:
+        test: ["CMD", "wget", "-qO-", "http://127.0.0.1:80/_info"]
+        interval: 10s
+        timeout: 5s
+        retries: 3
+        start_period: 15s
 
 volumes:
   medlib:
