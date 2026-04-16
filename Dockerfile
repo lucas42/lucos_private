@@ -1,4 +1,6 @@
 FROM httpd:2.4-alpine
+ARG VERSION
+ENV VERSION=$VERSION
 
 RUN apk add bash
 RUN echo "Include conf/vhost.conf" >> /usr/local/apache2/conf/httpd.conf
