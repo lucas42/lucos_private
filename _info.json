@@ -1,5 +1,7 @@
 {
 	"system": "lucos_private",
+	"checks": {},
+	"metrics": {},
 	"ci": {
 		"circle": "gh/lucas42/lucos_private"
 	}
